@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "title title"
+        "navigation-bar navigation-bar"
         "header header"
         "sidebar sidebar"
         "content content"
@@ -20,12 +20,67 @@
     background-color: red;
 }
 
+/*
 .grid div:nth-child(odd) {
     background-color: green;
 }
+*/
 
-.title {
-    grid-area: title;
+.navigation-bar {
+    grid-area: navigation-bar;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "navigation-button-home"
+        "navigation-button-info"
+        "navigation-button-agenda"
+        "navigation-button-media"
+        "navigation-button-members"
+        "navigation-button-contact";
+    background-color: rgb(85,117,71);
+}
+
+.navigation-button {
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    font-family: "Tahoma";
+    font-size: 17px;
+    color: white;
+}
+
+.navigation-button:hover {
+
+
+    background-color: white;
+    font-family: "Tahoma";
+    font-size: 17px;
+    color: rgb(85,117,71);
+}
+
+.navigation-button-home {
+    grid-area: navigation-button-home;
+}
+
+.navigation-button-info {
+    grid-area: navigation-button-info;
+}
+
+.navigation-button-agenda {
+    grid-area: navigation-button-agenda;
+}
+
+.navigation-button-media {
+    grid-area: navigation-button-media;
+}
+
+.navigation-button-members {
+    grid-area: navigation-button-members;
+}
+
+.navigation-button-contact {
+    grid-area: navigation-button-contact;
 }
 
 .header {
@@ -50,7 +105,7 @@
     grid-template-columns: 1fr 500px 500px 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        ". title title ."
+        ". navigation-bar navigation-bar ."
         ". header header ."
         ". sidebar content ."
         ". footer footer .";
