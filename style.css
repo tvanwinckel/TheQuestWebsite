@@ -6,12 +6,13 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr auto auto;
+    grid-template-rows: 1fr 1fr auto auto auto;
     grid-template-areas: 
         "navigation-bar navigation-bar"
         "header-image header-image"
         "header header"
         "introduction introduction"
+        "calendar calendar"
         "footer footer";
 }
 
@@ -104,16 +105,52 @@
     padding: 15px;
 }
 
-.sidebar {
-    grid-area: sidebar;
+.calendar {
+    grid-area: calendar;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "calendar-title"
+        "calendar-grid";
+    
+    font-family: "Tahoma";
+    font-size: 17px;
+    color: rgb(85,117,71);
 }
 
-.content {
-    grid-area: content;
+.calendar-title {
+    grid-area: calendar-title;
+    padding: 15px;
+    background-color: rgb(85,117,71);
+    color: white;
 }
 
-.footer {
-    grid-area: footer;
+.calendar-grid {
+    grid-area: calendar-grid;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-auto-rows: auto auto;
+    grid-template-areas: 
+        "calendar-event-date calendar-event-what"
+        ".  calendar-event-where";
+    
+    padding: 5px 15px 5px 15px;
+    
+    font-size: 17px;    
+}
+
+.calendar-event-date {
+    grid-area: calendar-event-date;
+}
+
+.calendar-event-what {
+    grid-area: calendar-event-what;
+}
+
+.calendar-event-where {
+    grid-area: calendar-event-where;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 /*
