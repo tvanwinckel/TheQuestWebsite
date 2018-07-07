@@ -229,12 +229,61 @@
 
 .audio {
     grid-area: audio;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "audio-grid-fragment-1 audio-grid-fragment-2 audio-grid-fragment-3"
+        "audio-player audio-player audio-player";
     
-    margin-top: 15px;
+/*    max-width: 80%;*/
+    
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.audio-fragment {
+    text-align: center;
     
-    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    
+    background-color: rgb(85,117,71);
+    color: white;
+}
+
+.audio-fragment:hover {
+    background-color: purple;
+}
+
+.audio-fragment p {
+    width: 100px;
+    height: 100px;
+    
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    
+    font-size: 14px;
+}
+
+.audio-grid-fragment-1 {
+    grid-area: audio-grid-fragment-1;
+}
+
+.audio-grid-fragment-2 {
+    grid-area: audio-grid-fragment-2;
+}
+
+.audio-grid-fragment-3 {
+    grid-area: audio-grid-fragment-3;
+}
+
+.audio-player {
+    grid-area: audio-player;
+    margin-top: 15px;
 }
 
 .video {
