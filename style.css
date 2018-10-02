@@ -6,7 +6,7 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr auto auto auto auto auto;
+    grid-template-rows: auto 1fr auto auto auto auto auto;
     grid-template-areas: 
         "navigation-bar"
         "header-image"
@@ -296,6 +296,42 @@
     height: 315px;
 /*    display: block;*/
 /*    margin: 0 auto;*/
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas:
+        "footer-title"
+        "footer-mail"
+        "footer-telephone"
+        "footer-social"; 
+    
+/*    justify-content: end;*/
+    
+    font-family: "Tahoma";
+    font-size: 17px;
+    color: rgb(85,117,71);
+}
+
+.footer-title {
+    grid-area: footer-title;
+}
+
+.footer-mail {
+    grid-area: footer-mail;
+    text-align: right;
+}
+
+.footer-telephone {
+    grid-area: footer-telephone;
+    text-align: right;
+}
+
+.footer-social {
+    grid-area: footer-social;
+    text-align: right;
 }
 
 
