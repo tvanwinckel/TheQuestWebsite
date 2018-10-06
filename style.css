@@ -6,9 +6,10 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto auto auto auto auto;
-    grid-template-areas: 
-        "navigation-bar"
+    grid-template-rows: auto auto 1fr auto auto auto auto auto;
+    grid-template-areas:
+        "navigation-bar-collapsible"
+        "navigation-bar-items"
         "header-image"
         "header"
         "introduction"
@@ -18,7 +19,43 @@
 }
 
 .navigation-bar {
-    grid-area: navigation-bar;
+    background-color: rgb(85,117,71);
+}
+
+.navigation-bar-collapsible {
+    grid-area: navigation-bar-collapsible;
+
+  background-color: rgb(85,117,71);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 25px;
+}
+
+.active, .navigation-bar-collapsible:hover {
+  background-color: rgb(85,117,71);
+}
+
+.navigation-bar-collapsible:after {
+    background-color: rgb(85,117,71);
+    
+    content: '\2630';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+  content: "\01D5EB";
+}
+
+.navigation-bar-items {
+    grid-area: navigation-bar-items;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -31,6 +68,8 @@
     
     background-color: rgb(85,117,71);
     
+    max-height: 0;
+    transition: max-height 250ms ease-out;
     font-family: "Tahoma";
     font-size: 17px;
 }
@@ -235,8 +274,6 @@
     grid-template-areas: 
         "audio-grid-fragment-1 audio-grid-fragment-2 audio-grid-fragment-3"
         "audio-player audio-player audio-player";
-    
-/*    max-width: 80%;*/
     
     margin-top: 25px;
     margin-left: auto;

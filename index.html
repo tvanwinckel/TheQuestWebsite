@@ -10,13 +10,17 @@
         
         <div class="grid">
             <div class="navigation-bar">
-                <p class="navigation-button navigation-button-home">Home</p>
-                <p class="navigation-button navigation-button-info">Info</p>
-                <p class="navigation-button navigation-button-agenda">Agenda</p>
-                <p class="navigation-button navigation-button-media">Media</p>
-                <p class="navigation-button navigation-button-members">Leden</p>
-                <p class="navigation-button navigation-button-contact">Contact</p>
+                <button class="navigation-bar-collapsible"></button>
+                <div class="navigation-bar-items">
+                    <p class="navigation-button navigation-button-home">Home</p>
+                    <p class="navigation-button navigation-button-info">Info</p>
+                    <p class="navigation-button navigation-button-agenda">Agenda</p>
+                    <p class="navigation-button navigation-button-media">Media</p>
+                    <p class="navigation-button navigation-button-members">Leden</p>
+                    <p class="navigation-button navigation-button-contact">Contact</p>
+                </div>
             </div>
+            
             
             <img class="header-image" src="TheQuest.jpg" alt="TheQuestInstruments">
             
@@ -119,4 +123,22 @@
         </div>
         
     </body>
+
+    <script>
+        var coll = document.getElementsByClassName("navigation-bar-collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+            });
+        }
+    </script>
+    
 </html>
