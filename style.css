@@ -301,18 +301,16 @@
 .footer {
     grid-area: footer;
     display: grid;
-    grid-template-rows: 1fr auto auto auto;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 1fr auto auto;
     grid-template-areas:
-        "footer-title"
-        "footer-mail"
-        "footer-telephone"
-        "footer-social"; 
-    
-/*    justify-content: end;*/
+        "footer-title footer-mail"
+        "footer-telephone footer-telephone"
+        "footer-social footer-social"; 
     
     font-family: "Tahoma";
     font-size: 17px;
-    color: rgb(85,117,71);
+    background-color: rgb(85,117,71);
 }
 
 .footer-title {
