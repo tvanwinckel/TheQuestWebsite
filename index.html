@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="lightbox/css/lightbox.css">
         <title>The Quest</title>
+        <script src="lightbox/js/lightbox-plus-jquery.js"></script>
+        
     </head>
     <body>
         
@@ -80,10 +83,18 @@
             <div class="media">
                 <div class="media-title sub-title">Media</div>
                 <div class="images">
-                    <img class="media-image media-grid-image-1" src="preview.jpg" alt="TheQuestInstruments">
-                    <img class="media-image media-grid-image-2" src="preview.jpg" alt="TheQuestInstruments">
-                    <img class="media-image media-grid-image-3" src="preview.jpg" alt="TheQuestInstruments">
-                    <img class="media-image media-grid-image-4" src="preview.jpg" alt="TheQuestInstruments">                    
+                    <a class="media-image-anchor" href="preview.jpg" data-lightbox="images">
+                      <img class="media-image media-grid-image-0" src="preview.jpg" alt="TheQuestInstruments">
+                    </a>
+                    <a class="media-image-anchor" href="TheQuest.jpg" data-lightbox="images">
+                      <img class="media-image media-grid-image-1" src="preview.jpg" alt="TheQuestInstruments">
+                    </a>
+                    <a class="media-image-anchor" href="TheQuest.jpg" data-lightbox="images">
+                      <img class="media-image media-grid-image-2" src="preview.jpg" alt="TheQuestInstruments">
+                    </a>
+                    <a class="media-image-anchor" href="TheQuest.jpg" data-lightbox="images">
+                      <img class="media-image media-grid-image-3" src="preview.jpg" alt="TheQuestInstruments">
+                    </a>
                 </div>
                 
                 <div class="audio">
@@ -140,5 +151,4 @@
             });
         }
     </script>
-    
 </html>
