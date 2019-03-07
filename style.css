@@ -60,19 +60,20 @@
 .navigation-bar-items {
     grid-area: navigation-bar-items;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "navigation-button-home"
         "navigation-button-info"
         "navigation-button-agenda"
         "navigation-button-media"
         "navigation-button-members"
-        "navigation-button-contact";
+        "navigation-button-contact"
+        "navigation-button-promo";
     
     background-color: rgb(85,117,71);
     
     max-height: 0;
-    transition: max-height 250ms ease-out;
+    
     font-family: "Tahoma";
     font-size: 20px;
 }
@@ -82,6 +83,11 @@
     align-self: center;
     text-align: center;
     color: white;
+}
+
+.navigation-button a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navigation-button:hover {
@@ -111,6 +117,10 @@
 
 .navigation-button-contact {
     grid-area: navigation-button-contact;
+}
+
+.navigation-button-promo {
+    grid-area: navigation-button-promo;
 }
 
 .header-image {
@@ -425,19 +435,22 @@
     .navigation-bar-collapsible {
         display: none;
     }
-    
+        
     .navigation-bar-items {
         grid-area: navigation-bar-items;
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto auto auto auto 1fr auto;
         grid-template-areas: 
-            "navigation-button-home navigation-button-info navigation-button-agenda navigation-button-media navigation-button-members navigation-button-contact";
+            "navigation-button-home navigation-button-info navigation-button-agenda navigation-button-media navigation-button-members navigation-button-contact . navigation-button-promo";
         
-        max-height: 50px;
+        max-height: 100px;
         justify-content: start;
     }
 
+    .navigation-button {
+        padding: 15px 25px 15px 25px;
+    }
     
     .calendar-grid {
         grid-template-columns: 15% 50% auto;

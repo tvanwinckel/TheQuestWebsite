@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="lightbox/css/lightbox.css">
         <title>The Quest</title>
+        <script src="javascript.js"></script>
         <script src="lightbox/js/lightbox-plus-jquery.js"></script>
         
     </head>
@@ -15,17 +16,19 @@
             <div class="navigation-bar">
                 <button class="navigation-bar-collapsible"></button>
                 <div class="navigation-bar-items">
-                    <p class="navigation-button navigation-button-home">Home</p>
-                    <p class="navigation-button navigation-button-info">Info</p>
-                    <p class="navigation-button navigation-button-agenda">Agenda</p>
-                    <p class="navigation-button navigation-button-media">Media</p>
-                    <p class="navigation-button navigation-button-members">Leden</p>
-                    <p class="navigation-button navigation-button-contact">Contact</p>
+                    <p class="navigation-button navigation-button-home"><a href="#home">Home</a></p>
+                    <p class="navigation-button navigation-button-info"><a href="#introduction">Info</a></p>
+                    <p class="navigation-button navigation-button-agenda"><a href="#calendar">Agenda</a></p>
+                    <p class="navigation-button navigation-button-media"><a href="#media">Media</a></p>
+<!--                    <p class="navigation-button navigation-button-members"><a href="#leden">Leden</a></p>-->
+                    <p class="navigation-button navigation-button-contact"><a href="#footer">Contact</a></p>
+                    <p class="navigation-button navigation-button-promo">Promo</p>
                 </div>
             </div>
                     
             
             <img class="header-image" src="TheQuest.jpg" alt="TheQuestInstruments">
+            
             
             <div class="header">
                 <p>Een cocktail van folk en kleinkunst uit de lage landen, met Ierse invloeden en een twist van Franse vrolijkheid.
@@ -33,6 +36,7 @@
             </div>
             
             <div class="introduction">
+                <a id="introduction" />
                 <p class="introduction-quote">Niet iedereen zal The Quest ontdekken.<br/>Een te gehaast reiziger mist immers de afslag.<br/>Een zoektocht vol vriendschap en authenticiteit, met een fijne nasmaak:<br/>'Wanneer zien we hen terug?'
                 </p>
                 <p class="introduction-text">The Quest gaat in 2007 aan de slag met drie zangeressen, 5 muzikanten en veel enthousiasme. Het plan is eenvoudig: nieuwe muziek maken die toch ‘bekend’ in de oren klinkt.<br/><br/>Na een zachte start wordt de route al snel duidelijk; festivals, culturele centra en feesten liggen duidelijk op de kaart, authenticiteit en sfeer zijn de uitverkoren reisgenoten.<br/><br/>Twee jaar later zorgt de Nekkawedstrijd voor deelname aan de kleinkunstcup te Baarle-Hertog. In 2013 werkt de groep op vraag van Kempens Landschap VZW mee aan de CD Potgrond. In de zomer van 2016 schittert de groep op de Finale van De Gentse feesten. Met recente aanwinsten Micheline De Mey (zang), Bram Van Weverberg (accordeon) en Greet Verhulst (viool) staat The Quest nu sterker dan ooit tevoren!</p>
@@ -40,27 +44,13 @@
             </div>
             
             <div class="calendar">
+                <a id="calendar"></a>
                 <div class="calendar-title sub-title">Agenda</div>
                 <ul>
                     <li class="calendar-grid">
-                        <p class="calendar-event-date">01 Sept '18</p>
-                        <p class="calendar-event-what">Sterk Onversterkt Festival</p>
-                        <p class="calendar-event-where">2610 Wilrijk</p>
-                    </li>
-                    <li class="calendar-grid">
-                        <p class="calendar-event-date">21 Sep '18</p>
-                        <p class="calendar-event-what">‘t Veurleste</p>
-                        <p class="calendar-event-where">Lindenboslaan 2, 2630 Aartselaar</p>
-                    </li>
-                    <li class="calendar-grid">
-                        <p class="calendar-event-date">06 Okt '18</p>
-                        <p class="calendar-event-what">Folk op't zolder</p>
-                        <p class="calendar-event-where">Zolder van de Martinuspastorij, 2390 Westmalle</p>
-                    </li>
-                    <li class="calendar-grid">
                         <p class="calendar-event-date">30 Nov '18</p>
-                        <p class="calendar-event-what">Concert</p>
-                        <p class="calendar-event-where">CC Mortsel, Heilig-Kruisstraat 16, 2640 Mortsel</p>
+                        <p class="calendar-event-what">Concert Vrije Tijd Mortsel</p>
+                        <p class="calendar-event-where">Academie Muziek Woord Dans, Eggestraat 13, 2640 Mortsel<br>Inkom €12,5 reserveren kan via 03/4441717.</p>
                     </li>
                     <li class="calendar-grid">
                         <p class="calendar-event-date">05 Apr '19</p>
@@ -72,15 +62,11 @@
                         <p class="calendar-event-what">Zaal Bart</p>
                         <p class="calendar-event-where">Bartholomeusstraat 9A, 2170 Merksem</p>
                     </li>
-                    <li class="calendar-grid">
-                        <p class="calendar-event-date">16 Juni '19</p>
-                        <p class="calendar-event-what">Midzomerfestival Beerzel-Putte</p>
-                        <p class="calendar-event-where">2580 Beerzel (Putte)</p>
-                    </li>
                 </ul>
             </div>
             
             <div class="media">
+                <a id="media"></a>
                 <div class="media-title sub-title">Media</div>
                 <div class="images">
                     <a class="media-image-anchor media-grid-image-0" href="preview.jpg" data-lightbox="images">
@@ -98,17 +84,17 @@
                 </div>
                 
                 <div class="audio">
-                    <div class="audio-fragment audio-grid-fragment-1">
+                    <div class="audio-fragment audio-grid-fragment-1" id="carrauntoohill" onclick="play('carrauntoohill')">
                         <p>Carrauntoohill</p>
                     </div>
-                    <div class="audio-fragment audio-grid-fragment-2">
+                    <div class="audio-fragment audio-grid-fragment-2" id="catherina" onclick="play('catherina')">
                         <p>Catherina</p>
                     </div>
-                    <div class="audio-fragment audio-grid-fragment-3">
+                    <div class="audio-fragment audio-grid-fragment-3" id="sentiment_du_coloris" onclick="play('sentiment_du_coloris')">
                         <p>Sentiment<br>Du Coloris</p>
                     </div>
-                    <audio class="audio-player" controls controlsList="nodownload">
-                         <source src="audio/AmoreVici.mp3" type="audio/mpeg">
+                    <audio class="audio-player" id="music-player" controls controlsList="nodownload">
+                         <source src="Carrauntoohill.mp3" type="audio/mpeg">
                     </audio>
                 </div>
                 
@@ -123,6 +109,7 @@
             </div>
             
             <div class="footer">
+                <a id="footer"></a>
                 <div class="footer-title sub-title">Contact</div>
                 <div class="footer-mail sub-title">info@thequest.be</div>
                 <div class="footer-telephone sub-title">+32 (0)3 454 55 21</div>
